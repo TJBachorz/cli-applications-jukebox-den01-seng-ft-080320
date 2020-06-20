@@ -36,6 +36,7 @@ end'''
 def play(array)
   puts "Please enter a song name or number:"
   user_selection = gets.strip
+  binding.pry
   if array.include?(user_selection)
     puts "Playing #{user_selection}"
   elsif user_selection.to_i === (1..array.length)
