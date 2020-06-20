@@ -21,7 +21,10 @@ def help
 end
 
 def list(array)
-  array.each_with_index { |song, index| 
+  array.each_with_index { 
+    |song, index| puts "#{index + 1}. #{song}" 
+  }
+end
 
 '''def list(array)
   index = 0 
@@ -30,4 +33,14 @@ def list(array)
   end
 end'''
 
-def play
+def play(array)
+  puts "Please enter a song name or number:"
+  user_selection = gets.strip
+  if array.include?(user_selection)
+    puts "Playing #{user_selection}"
+  elsif user_selection.to_i === (1..array.length)
+    puts "Playing #{array[user_selection.to_i - 1]}"
+  else
+    puts "Invalid input, please try again"
+  end
+end
