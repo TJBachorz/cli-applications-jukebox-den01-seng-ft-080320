@@ -21,10 +21,13 @@ def help
 end
 
 def list(array)
+  array.each_with_index
+
+'''def list(array)
   index = 0 
   while index < array.length do
     puts "#{index + 1}. #{songs[index]}"
   end
-end
+end'''
 
 def play
