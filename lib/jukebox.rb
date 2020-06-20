@@ -38,6 +38,7 @@ def play(array)
   user_selection = gets.strip
   binding.pry
   if array.include?(user_selection)
+    binding.pry
     puts "Playing #{user_selection}"
   elsif user_selection.to_i === (1..array.length)
     puts "Playing #{array[user_selection.to_i - 1]}"
