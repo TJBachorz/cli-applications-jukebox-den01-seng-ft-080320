@@ -26,3 +26,5 @@ def list(array)
     puts "#{index + 1}. #{songs[index]}"
   end
 end
+
+def play
