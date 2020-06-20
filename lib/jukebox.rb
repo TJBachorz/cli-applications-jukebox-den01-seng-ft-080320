@@ -21,7 +21,7 @@ def help
 end
 
 def list(array)
-  array.each_with_index
+  array.each_with_index { |song, index| 
 
 '''def list(array)
   index = 0 
