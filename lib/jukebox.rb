@@ -26,19 +26,10 @@ def list(array)
   }
 end
 
-'''def list(array)
-  index = 0 
-  while index < array.length do
-    puts "#{index + 1}. #{songs[index]}"
-  end
-end'''
-
 def play(array)
   puts "Please enter a song name or number:"
   user_selection = gets.strip
-  #binding.pry
   if array.include?(user_selection)
-    #binding.pry
     puts "Playing #{user_selection}"
   elsif (1..array.length) === user_selection.to_i
     puts "Playing #{array[user_selection.to_i - 1]}"
@@ -46,3 +37,5 @@ def play(array)
     puts "Invalid input, please try again"
   end
 end
+
+def exit_jukebox
