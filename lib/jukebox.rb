@@ -40,7 +40,7 @@ def play(array)
   if array.include?(user_selection)
     binding.pry
     puts "Playing #{user_selection}"
-  elsif user_selection.to_i === (1..array.length)
+  elsif (1..array.length) === user_selection.to_i
     puts "Playing #{array[user_selection.to_i - 1]}"
   else
     puts "Invalid input, please try again"
